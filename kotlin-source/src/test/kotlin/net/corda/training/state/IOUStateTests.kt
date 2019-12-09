@@ -186,10 +186,10 @@ class IOUStateTests {
      * Task 11.
      * TODO: Add a helper method called [withNewLender] that can be called from an [IOUState] to change the IOU's lender.
      */
-//    @Test
-//    fun checkWithNewLenderHelperMethod() {
-//        val iou = IOUState(10.DOLLARS, ALICE.party, BOB.party)
-//        assertEquals(MINICORP.party, iou.withNewLender(MINICORP.party).lender)
-//        assertEquals(MEGACORP.party, iou.withNewLender(MINICORP.party).withNewLender(MEGACORP.party).lender)
-//    }
+    @Test
+    fun checkWithNewLenderHelperMethod() {
+        val iou = IOUState(10.DOLLARS, ALICE.party, BOB.party)
+        assertEquals(MINICORP.party, iou.withNewLender(MINICORP.party).lender)
+        assertEquals(MEGACORP.party, iou.withNewLender(MINICORP.party).withNewLender(MEGACORP.party).lender)
+    }
 }
