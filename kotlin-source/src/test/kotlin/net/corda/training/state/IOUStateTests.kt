@@ -131,16 +131,16 @@ class IOUStateTests {
      * represent the complete life-cycle to date of an agreement, asset or shared fact.
      * - Provide a default value for [linearId] for a new [IOUState]
      */
-//    @Test
-//    fun hasLinearIdFieldOfCorrectType() {
-//        // Does the linearId field exist?
-//        IOUState::class.java.getDeclaredField("linearId")
-//        // Is the linearId field of the correct type?
-//        assertEquals(IOUState::class.java.getDeclaredField("linearId").type, UniqueIdentifier::class.java)
-//        // Check field is set to a not null value
-//        val iouState = IOUState(1.POUNDS, ALICE.party, BOB.party)
-//        assertNotNull(iouState.linearId)
-//    }
+    @Test
+    fun hasLinearIdFieldOfCorrectType() {
+        // Does the linearId field exist?
+        IOUState::class.java.getDeclaredField("linearId")
+        // Is the linearId field of the correct type?
+        assertEquals(IOUState::class.java.getDeclaredField("linearId").type, UniqueIdentifier::class.java)
+        // Check field is set to a not null value
+        val iouState = IOUState(1.POUNDS, ALICE.party, BOB.party)
+        assertNotNull(iouState.linearId)
+    }
 
     /**
      * Task 9.
