@@ -102,11 +102,11 @@ class IOUStateTests {
      * Task 6.
      * TODO: Similar to the last task, include the borrower within the [IOUState.participants] list
      */
-//    @Test
-//    fun borrowerIsParticipant() {
-//        val iouState = IOUState(1.POUNDS, ALICE.party, BOB.party)
-//        assertNotEquals(iouState.participants.indexOf(BOB.party), -1)
-//    }
+    @Test
+    fun borrowerIsParticipant() {
+        val iouState = IOUState(1.POUNDS, ALICE.party, BOB.party)
+        assertNotEquals(iouState.participants.indexOf(BOB.party), -1)
+    }
 
     /**
      * Task 7.
