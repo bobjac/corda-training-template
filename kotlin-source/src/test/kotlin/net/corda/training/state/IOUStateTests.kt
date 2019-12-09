@@ -148,20 +148,20 @@ class IOUStateTests {
      * Hint: Make sure that the lender and borrower fields are not in the wrong order as this may cause some
      * confusion in subsequent tasks!
      */
-//    @Test
-//    fun checkIOUStateParameterOrdering() {
-//        val fields = IOUState::class.java.declaredFields
-//        val amountIdx = fields.indexOf(IOUState::class.java.getDeclaredField("amount"))
-//        val lenderIdx = fields.indexOf(IOUState::class.java.getDeclaredField("lender"))
-//        val borrowerIdx = fields.indexOf(IOUState::class.java.getDeclaredField("borrower"))
-//        val paidIdx = fields.indexOf(IOUState::class.java.getDeclaredField("paid"))
-//        val linearIdIdx = fields.indexOf(IOUState::class.java.getDeclaredField("linearId"))
-//
-//        assert(amountIdx < lenderIdx)
-//        assert(lenderIdx < borrowerIdx)
-//        assert(borrowerIdx < paidIdx)
-//        assert(paidIdx < linearIdIdx)
-//    }
+    @Test
+    fun checkIOUStateParameterOrdering() {
+        val fields = IOUState::class.java.declaredFields
+        val amountIdx = fields.indexOf(IOUState::class.java.getDeclaredField("amount"))
+        val lenderIdx = fields.indexOf(IOUState::class.java.getDeclaredField("lender"))
+        val borrowerIdx = fields.indexOf(IOUState::class.java.getDeclaredField("borrower"))
+        val paidIdx = fields.indexOf(IOUState::class.java.getDeclaredField("paid"))
+        val linearIdIdx = fields.indexOf(IOUState::class.java.getDeclaredField("linearId"))
+
+        assert(amountIdx < lenderIdx)
+        assert(lenderIdx < borrowerIdx)
+        assert(borrowerIdx < paidIdx)
+        assert(paidIdx < linearIdIdx)
+    }
 
     /**
      * Task 10.
