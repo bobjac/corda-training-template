@@ -56,13 +56,13 @@ class IOUStateTests {
      * Task 3.
      * TODO: Add a 'borrower' property of type [Party] to the [IOUState] class to get this test to pass.
      */
-//    @Test
-//    fun hasBorrowerFieldOfCorrectType() {
-//        // Does the borrower field exist?
-//        IOUState::class.java.getDeclaredField("borrower")
-//        // Is the borrower field of the correct type?
-//        assertEquals(IOUState::class.java.getDeclaredField("borrower").type, Party::class.java)
-//    }
+    @Test
+    fun hasBorrowerFieldOfCorrectType() {
+        // Does the borrower field exist?
+        IOUState::class.java.getDeclaredField("borrower")
+        // Is the borrower field of the correct type?
+        assertEquals(IOUState::class.java.getDeclaredField("borrower").type, Party::class.java)
+    }
 
     /**
      * Task 4.
