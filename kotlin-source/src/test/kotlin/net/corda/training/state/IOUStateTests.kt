@@ -174,13 +174,13 @@ class IOUStateTests {
      * - [copy] returns a copy of the object instance and the fields can be changed by specifying new values as
      * parameters to [copy]
      */
-//    @Test
-//    fun checkPayHelperMethod() {
-//        val iou = IOUState(10.DOLLARS, ALICE.party, BOB.party)
-//        assertEquals(5.DOLLARS, iou.pay(5.DOLLARS).paid)
-//        assertEquals(3.DOLLARS, iou.pay(1.DOLLARS).pay(2.DOLLARS).paid)
-//        assertEquals(10.5.DOLLARS, iou.pay(5.DOLLARS).pay(3.DOLLARS).pay(2.5.DOLLARS).paid)
-//    }
+    @Test
+    fun checkPayHelperMethod() {
+        val iou = IOUState(10.DOLLARS, ALICE.party, BOB.party)
+        assertEquals(5.DOLLARS, iou.pay(5.DOLLARS).paid)
+        assertEquals(3.DOLLARS, iou.pay(1.DOLLARS).pay(2.DOLLARS).paid)
+        assertEquals(10.5.DOLLARS, iou.pay(5.DOLLARS).pay(3.DOLLARS).pay(2.5.DOLLARS).paid)
+    }
 
     /**
      * Task 11.
