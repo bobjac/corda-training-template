@@ -182,23 +182,23 @@ class IOUIssueTests {
      * - You can use the [IOUState.lender] and [IOUState.borrower] properties.
      * - This check must be made before the checking who has signed.
      */
-//    @Test
-//    fun lenderAndBorrowerCannotBeTheSame() {
-//        val iou = IOUState(1.POUNDS, ALICE.party, BOB.party)
-//        val borrowerIsLenderIou = IOUState(10.POUNDS, ALICE.party, ALICE.party)
-//        ledgerServices.ledger {
-//            transaction {
-//                command(listOf(ALICE.publicKey, BOB.publicKey),IOUContract.Commands.Issue())
-//                output(IOUContract.IOU_CONTRACT_ID, borrowerIsLenderIou)
-//                this `fails with` "The lender and borrower cannot have the same identity."
-//            }
-//            transaction {
-//                command(listOf(ALICE.publicKey, BOB.publicKey), IOUContract.Commands.Issue())
-//                output(IOUContract.IOU_CONTRACT_ID, iou)
-//                this.verifies()
-//            }
-//        }
-//    }
+    @Test
+    fun lenderAndBorrowerCannotBeTheSame() {
+        val iou = IOUState(1.POUNDS, ALICE.party, BOB.party)
+        val borrowerIsLenderIou = IOUState(10.POUNDS, ALICE.party, ALICE.party)
+        ledgerServices.ledger {
+            transaction {
+                command(listOf(ALICE.publicKey, BOB.publicKey),IOUContract.Commands.Issue())
+                output(IOUContract.IOU_CONTRACT_ID, borrowerIsLenderIou)
+                this `fails with` "The lender and borrower cannot have the same identity."
+            }
+            transaction {
+                command(listOf(ALICE.publicKey, BOB.publicKey), IOUContract.Commands.Issue())
+                output(IOUContract.IOU_CONTRACT_ID, iou)
+                this.verifies()
+            }
+        }
+    }
 
     /**
      * Task 6.
