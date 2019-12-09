@@ -44,13 +44,13 @@ class IOUStateTests {
      * Task 2.
      * TODO: Add a 'lender' property of type [Party] to the [IOUState] class to get this test to pass.
      */
-//    @Test
-//    fun hasLenderFieldOfCorrectType() {
-//        // Does the lender field exist?
-//        IOUState::class.java.getDeclaredField("lender")
-//        // Is the lender field of the correct type?
-//        assertEquals(IOUState::class.java.getDeclaredField("lender").type, Party::class.java)
-//    }
+    @Test
+    fun hasLenderFieldOfCorrectType() {
+        // Does the lender field exist?
+        IOUState::class.java.getDeclaredField("lender")
+        // Is the lender field of the correct type?
+        assertEquals(IOUState::class.java.getDeclaredField("lender").type, Party::class.java)
+    }
 
     /**
      * Task 3.
